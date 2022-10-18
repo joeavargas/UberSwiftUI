@@ -12,6 +12,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     
     // MARK: - Properties
     @Published var results = [MKLocalSearchCompletion]()
+    @Published var selectedLocationCoordinates: CLLocationCoordinate2D?
+    
     private let searchCompleter = MKLocalSearchCompleter()
     var queryFragment: String = "" {
         didSet {
@@ -23,6 +25,34 @@ class LocationSearchViewModel: NSObject, ObservableObject {
         super.init()
         searchCompleter.delegate = self
         searchCompleter.queryFragment = queryFragment
+    }
+    
+    // MARK: - Helper Functions
+    
+    // Process the selected location by getting the coordinates(latitude and longitude) to display a pin in MapView
+    func selectedLocation(_ localSearch: MKLocalSearchCompletion) {
+        locationSearch(forLocalSearchCompletion: localSearch) { response, error in
+            
+            if let error = error {
+                print("DEBUG: Location search failed with error: ", error.localizedDescription)
+                return
+            }
+            
+            guard let item = response?.mapItems.first else {return}
+            let coordinate = item.placemark.coordinate
+            self.selectedLocationCoordinates = coordinate
+            print("DEBUG: local coordinates:", coordinate)
+        }
+    }
+    
+    // Get coordinates based on the address of the localSearch result selected
+    func locationSearch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion
+    , completion: @escaping MKLocalSearch.CompletionHandler) {
+        let searchRequest = MKLocalSearch.Request()
+        
+        searchRequest.naturalLanguageQuery = localSearch.title.appending(localSearch.subtitle)
+        let search = MKLocalSearch(request: searchRequest)
+        search.start(completionHandler: completion)
     }
 }
 
