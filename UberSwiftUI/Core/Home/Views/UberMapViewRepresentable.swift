@@ -93,7 +93,6 @@ extension UberMapViewRepresentable {
             self.parent.mapView.addAnnotation(anno)
             self.parent.mapView.selectAnnotation(anno, animated: true)
             
-            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
         }
         
         func getDestinationRoute(from userLocation: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping(MKRoute) -> Void){
@@ -122,6 +121,13 @@ extension UberMapViewRepresentable {
             
             getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
+                
+                // Shrink the mapView when the RideRequestView is presented
+                // to clearly show both destination location and user's location annotations
+                // The presented RideRequestView height is 500px hence why the mapview is given a bottom edge padding value of 500
+                let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
+                                                               edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
+                self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
         
