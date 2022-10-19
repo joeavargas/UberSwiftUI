@@ -1,5 +1,5 @@
 //
-//  HomeVIew.swift
+//  HomeView.swift
 //  UberSwiftUI
 //
 //  Created by Joe Vargas on 10/13/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeVIew: View {
+struct HomeView: View {
     @State private var mapState = MapViewState.noInput
     
     var body: some View {
@@ -36,6 +36,6 @@ struct HomeVIew: View {
 
 struct HomeVIew_Previews: PreviewProvider {
     static var previews: some View {
-        HomeVIew()
+        HomeView()
     }
 }

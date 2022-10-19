@@ -12,7 +12,7 @@ struct UberSwiftUIApp: App {
     @StateObject var locationSearchVM = LocationSearchViewModel()
     var body: some Scene {
         WindowGroup {
-            HomeVIew()
+            HomeView()
                 .environmentObject(locationSearchVM)
         }
     }
