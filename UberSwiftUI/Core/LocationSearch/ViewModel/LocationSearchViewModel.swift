@@ -21,6 +21,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
         }
     }
     
+    var userLocation: CLLocationCoordinate2D?
+    
     override init(){
         super.init()
         searchCompleter.delegate = self
@@ -53,6 +55,17 @@ class LocationSearchViewModel: NSObject, ObservableObject {
         searchRequest.naturalLanguageQuery = localSearch.title.appending(localSearch.subtitle)
         let search = MKLocalSearch(request: searchRequest)
         search.start(completionHandler: completion)
+    }
+    
+    func computeRidePrice(forType type: RideType) -> Double {
+        guard let destinationCoordinate = selectedLocationCoordinates else {return 0.0}
+        guard let userLocationCoordinate = self.userLocation else {return 0.0}
+        
+        let userLocation = CLLocation(latitude: userLocationCoordinate.latitude, longitude: userLocationCoordinate.longitude)
+        let destination = CLLocation(latitude: destinationCoordinate.latitude, longitude: destinationCoordinate.longitude)
+        
+        let tripDestinationInMeters = userLocation.distance(from: destination)
+        return type.computePrice(for: tripDestinationInMeters)
     }
 }
 
