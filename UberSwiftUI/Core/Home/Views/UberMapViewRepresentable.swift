@@ -33,11 +33,14 @@ struct UberMapViewRepresentable: UIViewRepresentable {
             break
         case .locationSelected:
             if let coordinate = locationSearchVM.selectedUberLocation?.coordinate {
+                print("DEBUG: adding stuff to map", #function)
                 context.coordinator.addAndSelectedAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
             break
         case .searchingForLocation:
+            break
+        case .polylineAdded:
             break
         }
     }
@@ -100,7 +103,7 @@ extension UberMapViewRepresentable {
             
             parent.locationSearchVM.getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
-                
+                self.parent.mapState = .polylineAdded
                 // Shrink the mapView when the RideRequestView is presented
                 // to clearly show both destination location and user's location annotations
                 // The presented RideRequestView height is 500px hence why the mapview is given a bottom edge padding value of 500
