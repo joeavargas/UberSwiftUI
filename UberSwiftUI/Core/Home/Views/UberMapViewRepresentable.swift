@@ -32,7 +32,7 @@ struct UberMapViewRepresentable: UIViewRepresentable {
             context.coordinator.clearMapViewAndRecenterOnUserLocation()
             break
         case .locationSelected:
-            if let coordinate = locationSearchVM.selectedLocationCoordinates {
+            if let coordinate = locationSearchVM.selectedUberLocation?.coordinate {
                 context.coordinator.addAndSelectedAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
@@ -95,31 +95,10 @@ extension UberMapViewRepresentable {
             
         }
         
-        func getDestinationRoute(from userLocation: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping(MKRoute) -> Void){
-            
-            let userPlacemark = MKPlacemark(coordinate: userLocation)
-            let destinationPlacemark = MKPlacemark(coordinate: destination)
-            
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: userPlacemark)
-            request.destination = MKMapItem(placemark: MKPlacemark(placemark: destinationPlacemark))
-            
-            let directions = MKDirections(request: request)
-            directions.calculate { response, error in
-                if let error = error {
-                    print("DEBUG: failed to get directions with error", error.localizedDescription)
-                    return
-                }
-                
-                guard let route = response?.routes.first else {return}
-                completion(route)
-            }
-        }
-        
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D){
             guard let userLocationCoordinate = self.userLocationCoordinate else {return}
             
-            getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
+            parent.locationSearchVM.getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
                 
                 // Shrink the mapView when the RideRequestView is presented
