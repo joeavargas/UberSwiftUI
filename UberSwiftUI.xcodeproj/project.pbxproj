@@ -22,6 +22,7 @@
 		E34FAC2328FDDA6400351368 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FAC2228FDDA6400351368 /* LocationSearchViewModel.swift */; };
 		E3FD4F982901C47C0050AA65 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4F972901C47C0050AA65 /* RideType.swift */; };
 		E3FD4F9A2901DAFA0050AA65 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4F992901DAFA0050AA65 /* Double.swift */; };
+		E3FD4F9C2901E9810050AA65 /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4F9B2901E9810050AA65 /* UberLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E34FAC2228FDDA6400351368 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		E3FD4F972901C47C0050AA65 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		E3FD4F992901DAFA0050AA65 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		E3FD4F9B2901E9810050AA65 /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				E3210EE828FF7C3B00C6A55A /* MapViewState.swift */,
 				E3FD4F972901C47C0050AA65 /* RideType.swift */,
+				E3FD4F9B2901E9810050AA65 /* UberLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				E34FAC2128FDC60A00351368 /* LocationSearchResultsCell.swift in Sources */,
 				E344D89728F889EE003A7437 /* UberSwiftUIApp.swift in Sources */,
 				E344D8AE28F88BD3003A7437 /* UberMapViewRepresentable.swift in Sources */,
+				E3FD4F9C2901E9810050AA65 /* UberLocation.swift in Sources */,
 				E344D8AC28F88AEF003A7437 /* HomeView.swift in Sources */,
 				E34FAC1B28FDBFEE00351368 /* LocationSearchActivationView.swift in Sources */,
 				E3FD4F982901C47C0050AA65 /* RideType.swift in Sources */,

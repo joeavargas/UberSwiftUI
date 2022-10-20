@@ -54,8 +54,10 @@ struct RideRequestView: View {
                     
                     // MARK: destination location view
                     HStack {
-                        Text("Porch Swing Pub")
-                            .font(.system(size: 16, weight: .semibold))
+                        if let location = locationViewModel.selectedUberLocation {
+                            Text(location.title)
+                                .font(.system(size: 16, weight: .semibold))
+                        }
                         
                         Spacer()
                         

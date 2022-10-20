@@ -38,7 +38,7 @@ struct MapViewActionButton: View {
         case .locationSelected:
             mapState = .noInput
             // clear any stored selected location coordinates
-            locationServiceVM.selectedLocationCoordinates = nil
+            locationServiceVM.selectedUberLocation = nil
         }
     }
     

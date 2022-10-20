@@ -32,7 +32,7 @@ struct UberMapViewRepresentable: UIViewRepresentable {
             context.coordinator.clearMapViewAndRecenterOnUserLocation()
             break
         case .locationSelected:
-            if let coordinate = locationSearchVM.selectedLocationCoordinates {
+            if let coordinate = locationSearchVM.selectedUberLocation?.coordinate {
                 context.coordinator.addAndSelectedAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
