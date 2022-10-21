@@ -22,6 +22,7 @@
 		E34FAC2328FDDA6400351368 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FAC2228FDDA6400351368 /* LocationSearchViewModel.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
+		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
 		E3FD4F982901C47C0050AA65 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4F972901C47C0050AA65 /* RideType.swift */; };
 		E3FD4F9A2901DAFA0050AA65 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4F992901DAFA0050AA65 /* Double.swift */; };
 		E3FD4F9C2901E9810050AA65 /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4F9B2901E9810050AA65 /* UberLocation.swift */; };
@@ -45,6 +46,7 @@
 		E34FAC2228FDDA6400351368 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
 		E3FD4F972901C47C0050AA65 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		E3FD4F992901DAFA0050AA65 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E3FD4F9B2901E9810050AA65 /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = "<group>"; };
@@ -140,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				E3EE562C2902510C00063864 /* Authentication */,
-				E3129A3C2900589400D2E3D4 /* Trips */,
-				E34FAC1728FDBFCC00351368 /* LocationSearch */,
 				E34FAC1628FDBFC200351368 /* Home */,
+				E34FAC1728FDBFCC00351368 /* LocationSearch */,
+				E3129A3C2900589400D2E3D4 /* Trips */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 			children = (
 				E3EE56332902644F00063864 /* Registration */,
 				E3EE562D2902512B00063864 /* Login */,
+				E3EE56382902F29700063864 /* SharedViews */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -262,6 +265,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E3EE56382902F29700063864 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				E3EE56392902F32D00063864 /* AuthenticationTextField.swift */,
+			);
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 				E344D8B028F88D0B003A7437 /* LocationManager.swift in Sources */,
 				E3129A3E290058A400D2E3D4 /* RideRequestView.swift in Sources */,
 				E3FD4F9A2901DAFA0050AA65 /* Double.swift in Sources */,
+				E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */,
 				E3EE56372902648400063864 /* RegistrationView.swift in Sources */,
 				E3210EE928FF7C3B00C6A55A /* MapViewState.swift in Sources */,
 				E34FAC1D28FDC16A00351368 /* MapViewActionButton.swift in Sources */,

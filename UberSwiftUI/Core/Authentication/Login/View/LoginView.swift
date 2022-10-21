@@ -22,12 +22,17 @@ struct LoginView: View {
                         .font(Font.custom("Avenir-Light", size: 36))
                     
                     VStack(spacing: 20) {
-                        // email field
-                        TextField("Email", text: $email)
+                        //MARK: email textfield
+                        AuthenticationTextField(imageName: "envelope",
+                                                placeholderText: "Email",
+                                                isSecureField: false,
+                                                text: $email)
                         
-                        // password field
-                        SecureField("Password", text: $password)
-                        
+                        //MARK: password textfield
+                        AuthenticationTextField(imageName: "lock",
+                                                placeholderText: "Password",
+                                                isSecureField: true,
+                                                text: $password)
                     }
                     .padding([.top, .horizontal], 32)
                     
