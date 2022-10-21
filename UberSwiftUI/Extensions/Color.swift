@@ -16,4 +16,5 @@ struct ColorTheme {
     let backgroundColor = Color("BackgroundColor")
     let secondaryBackgroundColor = Color("SecondaryBackgroundColor")
     let primaryTextColor = Color("PrimaryTextColor")
+    let customGrayColor = Color("CustomGray")
 }
