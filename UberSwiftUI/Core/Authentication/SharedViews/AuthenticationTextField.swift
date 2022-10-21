@@ -21,7 +21,6 @@ struct AuthenticationTextField: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
-                    .foregroundColor(Color(.darkGray))
                 
                 if isSecureField {
                     SecureField(placeholderText, text: $text)
@@ -29,6 +28,7 @@ struct AuthenticationTextField: View {
                     TextField(placeholderText, text: $text)
                 }
             }
+            .foregroundColor(.white)
             
             Divider()
                 .background(Color(.darkGray))
