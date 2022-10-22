@@ -11,6 +11,8 @@ struct RegistrationView: View {
     @State private var email = ""
     @State private var fullname = ""
     @State private var password = ""
+    @Environment(\.presentationMode) var mode
+    
     var body: some View {
             ZStack {
                 Color.theme.customGrayColor
@@ -56,7 +58,7 @@ struct RegistrationView: View {
                     
                     //MARK: "already have an account" link
                     Button(action: {
-                        print("DEBUG: dismiss to LoginView")
+                        mode.wrappedValue.dismiss()
                     }, label: {
                         HStack{
                             Text("Already have an account?")
