@@ -25,6 +25,7 @@
 		E3567CB229039BBD00954A5C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E3567CB129039BBD00954A5C /* FirebaseFunctions */; };
 		E3567CB429039BBD00954A5C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E3567CB329039BBD00954A5C /* FirebaseStorage */; };
 		E3567CB729051BB900954A5C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CB629051BB800954A5C /* AuthViewModel.swift */; };
+		E3567CBA2905405500954A5C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CB92905405500954A5C /* ImagePicker.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
 		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
@@ -51,6 +52,7 @@
 		E34FAC2028FDC60A00351368 /* LocationSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsCell.swift; sourceTree = "<group>"; };
 		E34FAC2228FDDA6400351368 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		E3567CB629051BB800954A5C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E3567CB92905405500954A5C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				E344D8A628F88AA1003A7437 /* Extensions */,
 				E344D8A528F88AA0003A7437 /* Managers */,
 				E344D8A428F88A9D003A7437 /* Models */,
+				E3567CB82905404100954A5C /* Utils */,
 				E344D89628F889EE003A7437 /* UberSwiftUIApp.swift */,
 				E344D89A28F889F1003A7437 /* Assets.xcassets */,
 				E344D89C28F889F1003A7437 /* Preview Content */,
@@ -228,6 +231,14 @@
 				E3567CB629051BB800954A5C /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E3567CB82905404100954A5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3567CB92905405500954A5C /* ImagePicker.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E3EE562C2902510C00063864 /* Authentication */ = {
@@ -362,6 +373,7 @@
 				E3FD4F9C2901E9810050AA65 /* UberLocation.swift in Sources */,
 				E344D8AC28F88AEF003A7437 /* HomeView.swift in Sources */,
 				E34FAC1B28FDBFEE00351368 /* LocationSearchActivationView.swift in Sources */,
+				E3567CBA2905405500954A5C /* ImagePicker.swift in Sources */,
 				E3EE56322902516700063864 /* LoginView.swift in Sources */,
 				E3FD4F982901C47C0050AA65 /* RideType.swift in Sources */,
 			);
