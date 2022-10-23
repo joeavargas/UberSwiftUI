@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State private var fullname = ""
     @State private var password = ""
     @Environment(\.presentationMode) var mode
+    @ObservedObject var authVM = AuthViewModel()
     
     var body: some View {
             ZStack {
@@ -41,7 +42,7 @@ struct RegistrationView: View {
                     
                     //MARK: register button
                     Button(action: {
-                        print("DEBUG: register user")
+                        authVM.register()
                     }, label: {
                         Text("Register")
                             .font(.headline)

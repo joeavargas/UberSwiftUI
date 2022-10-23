@@ -24,6 +24,7 @@
 		E3567CB029039BBD00954A5C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E3567CAF29039BBD00954A5C /* FirebaseFirestore */; };
 		E3567CB229039BBD00954A5C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E3567CB129039BBD00954A5C /* FirebaseFunctions */; };
 		E3567CB429039BBD00954A5C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E3567CB329039BBD00954A5C /* FirebaseStorage */; };
+		E3567CB729051BB900954A5C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CB629051BB800954A5C /* AuthViewModel.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
 		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
@@ -49,6 +50,7 @@
 		E34FAC1E28FDC24F00351368 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		E34FAC2028FDC60A00351368 /* LocationSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsCell.swift; sourceTree = "<group>"; };
 		E34FAC2228FDDA6400351368 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		E3567CB629051BB800954A5C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
@@ -220,11 +222,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E3567CB529051B9D00954A5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3567CB629051BB800954A5C /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E3EE562C2902510C00063864 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				E3EE56332902644F00063864 /* Registration */,
 				E3EE562D2902512B00063864 /* Login */,
+				E3567CB529051B9D00954A5C /* ViewModel */,
 				E3EE56382902F29700063864 /* SharedViews */,
 			);
 			path = Authentication;
@@ -233,49 +244,17 @@
 		E3EE562D2902512B00063864 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E3EE56302902514F00063864 /* ViewModel */,
-				E3EE562F2902514B00063864 /* View */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		E3EE562F2902514B00063864 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				E3EE56312902516700063864 /* LoginView.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E3EE56302902514F00063864 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E3EE56332902644F00063864 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				E3EE56352902646400063864 /* ViewModel */,
-				E3EE56342902645F00063864 /* View */,
-			);
-			path = Registration;
-			sourceTree = "<group>";
-		};
-		E3EE56342902645F00063864 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				E3EE56362902648400063864 /* RegistrationView.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E3EE56352902646400063864 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		E3EE56382902F29700063864 /* SharedViews */ = {
@@ -372,6 +351,7 @@
 				E3129A3E290058A400D2E3D4 /* RideRequestView.swift in Sources */,
 				E3FD4F9A2901DAFA0050AA65 /* Double.swift in Sources */,
 				E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */,
+				E3567CB729051BB900954A5C /* AuthViewModel.swift in Sources */,
 				E3EE56372902648400063864 /* RegistrationView.swift in Sources */,
 				E3210EE928FF7C3B00C6A55A /* MapViewState.swift in Sources */,
 				E34FAC1D28FDC16A00351368 /* MapViewActionButton.swift in Sources */,
