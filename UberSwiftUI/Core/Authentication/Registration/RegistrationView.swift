@@ -10,6 +10,7 @@ import SwiftUI
 struct RegistrationView: View {
     @State private var email = ""
     @State private var fullname = ""
+    @State private var username = ""
     @State private var password = ""
     @Environment(\.presentationMode) var mode
     @ObservedObject var authVM = AuthViewModel()
@@ -33,6 +34,9 @@ struct RegistrationView: View {
                         //MARK: full name textfield
                         AuthenticationTextField(imageName: "person", placeholderText: "Full name", isSecureField: false, text: $fullname)
                         
+                        // MARK: username textfield
+                        AuthenticationTextField(imageName: "person", placeholderText: "Username", isSecureField: false, text: $username)
+                        
                         //MARK: password textfield
                         AuthenticationTextField(imageName: "lock", placeholderText: "Password", isSecureField: true, text: $password)
                         
@@ -42,7 +46,10 @@ struct RegistrationView: View {
                     
                     //MARK: register button
                     Button(action: {
-                        authVM.register()
+                        authVM.register(withEmail: email,
+                                        password: password,
+                                        fullname: fullname,
+                                        username: username)
                     }, label: {
                         Text("Register")
                             .font(.headline)
