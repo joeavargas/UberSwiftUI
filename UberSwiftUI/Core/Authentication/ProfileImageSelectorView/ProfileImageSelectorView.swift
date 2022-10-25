@@ -26,6 +26,7 @@ struct ProfileImageSelectorView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(width: 180, height: 180)
+                            .clipped()
                             .clipShape(Circle())
                     } else {
                         Image(systemName: "plus.circle")

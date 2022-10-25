@@ -19,6 +19,11 @@ struct RegistrationView: View {
             ZStack {
                 Color.theme.customGrayColor
                 VStack {
+                    
+                    NavigationLink(destination: ProfileImageSelectorView(),
+                                   isActive:  $authVM.didAuthenticateUser,
+                                   label: {})
+                    
                     // MARK: uber title
                     Text("UBER")
                         .foregroundColor(.white)
@@ -32,13 +37,19 @@ struct RegistrationView: View {
                                                 text: $email)
                         
                         //MARK: full name textfield
-                        AuthenticationTextField(imageName: "person", placeholderText: "Full name", isSecureField: false, text: $fullname)
+                        AuthenticationTextField(imageName: "person",
+                                                placeholderText: "Full name",
+                                                isSecureField: false, text: $fullname)
                         
                         // MARK: username textfield
-                        AuthenticationTextField(imageName: "person", placeholderText: "Username", isSecureField: false, text: $username)
+                        AuthenticationTextField(imageName: "person",
+                                                placeholderText: "Username",
+                                                isSecureField: false, text: $username)
                         
                         //MARK: password textfield
-                        AuthenticationTextField(imageName: "lock", placeholderText: "Password", isSecureField: true, text: $password)
+                        AuthenticationTextField(imageName: "lock",
+                                                placeholderText: "Password",
+                                                isSecureField: true, text: $password)
                         
                         
                     }
