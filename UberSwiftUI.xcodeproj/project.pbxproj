@@ -28,6 +28,7 @@
 		E3567CBA2905405500954A5C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CB92905405500954A5C /* ImagePicker.swift */; };
 		E3567CBD2905496300954A5C /* ProfileImageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CBC2905496300954A5C /* ProfileImageSelectorView.swift */; };
 		E3567CBF290776D000954A5C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CBE290776D000954A5C /* ImageUploader.swift */; };
+		E3567CC3290790FA00954A5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CC2290790FA00954A5C /* ContentView.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
 		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
@@ -57,6 +58,7 @@
 		E3567CB92905405500954A5C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E3567CBC2905496300954A5C /* ProfileImageSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSelectorView.swift; sourceTree = "<group>"; };
 		E3567CBE290776D000954A5C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		E3567CC2290790FA00954A5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E344D8A428F88A9D003A7437 /* Models */,
 				E3567CB82905404100954A5C /* Utils */,
 				E344D89628F889EE003A7437 /* UberSwiftUIApp.swift */,
+				E3567CC2290790FA00954A5C /* ContentView.swift */,
 				E344D89A28F889F1003A7437 /* Assets.xcassets */,
 				E344D89C28F889F1003A7437 /* Preview Content */,
 				E3EE563D2903966200063864 /* GoogleService-Info.plist */,
@@ -387,6 +390,7 @@
 				E344D8AE28F88BD3003A7437 /* UberMapViewRepresentable.swift in Sources */,
 				E3FD4F9C2901E9810050AA65 /* UberLocation.swift in Sources */,
 				E344D8AC28F88AEF003A7437 /* HomeView.swift in Sources */,
+				E3567CC3290790FA00954A5C /* ContentView.swift in Sources */,
 				E34FAC1B28FDBFEE00351368 /* LocationSearchActivationView.swift in Sources */,
 				E3567CBA2905405500954A5C /* ImagePicker.swift in Sources */,
 				E3EE56322902516700063864 /* LoginView.swift in Sources */,

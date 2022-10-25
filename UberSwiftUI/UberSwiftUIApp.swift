@@ -10,7 +10,7 @@ import Firebase
 
 @main
 struct UberSwiftUIApp: App {
-    @StateObject var locationSearchVM = LocationSearchViewModel()
+    //    @StateObject var locationSearchVM = LocationSearchViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -20,7 +20,7 @@ struct UberSwiftUIApp: App {
         WindowGroup {
 //            HomeView()
 //                .environmentObject(locationSearchVM)
-            LoginView()
+            ContentView()
                 .environmentObject(AuthViewModel())
         }
     }
