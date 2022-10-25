@@ -21,6 +21,7 @@ struct UberSwiftUIApp: App {
 //            HomeView()
 //                .environmentObject(locationSearchVM)
             LoginView()
+                .environmentObject(AuthViewModel())
         }
     }
 }

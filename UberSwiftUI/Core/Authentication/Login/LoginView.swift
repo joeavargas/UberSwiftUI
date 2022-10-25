@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    @ObservedObject var authVM = AuthViewModel()
+    @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
         NavigationView {

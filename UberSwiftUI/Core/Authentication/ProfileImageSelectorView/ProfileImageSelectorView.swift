@@ -11,7 +11,7 @@ struct ProfileImageSelectorView: View {
     @State private var imagePickerPresented = false
     @State private var selectedImage: UIImage?
     @State private var profileImage: Image?
-    @ObservedObject var authVM = AuthViewModel()
+    @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
         ZStack {
@@ -46,10 +46,10 @@ struct ProfileImageSelectorView: View {
                 Text(profileImage == nil ? "Upload a profile image" : "Great! Tap below to continue")
                     .font(.system(size: 20, weight: .semibold))
                 
-                if profileImage != nil {
+                if let image = selectedImage {
                     //MARK: handle selecting and uploading image now
                     Button(action: {
-                        authVM.uploadProfileImage()
+                        authVM.uploadProfileImage(image)
                     }, label: {
                         Text("Continue")
                             .font(.headline)

@@ -13,7 +13,7 @@ struct RegistrationView: View {
     @State private var username = ""
     @State private var password = ""
     @Environment(\.presentationMode) var mode
-    @ObservedObject var authVM = AuthViewModel()
+    @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
             ZStack {
