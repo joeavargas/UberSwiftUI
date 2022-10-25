@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if authVM.userSession != nil {
-                HomeView()
+                MainTabView()
                     .environmentObject(locationSearchVM)
             } else {
                 LoginView()

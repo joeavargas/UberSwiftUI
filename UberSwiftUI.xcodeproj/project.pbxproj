@@ -29,6 +29,7 @@
 		E3567CBD2905496300954A5C /* ProfileImageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CBC2905496300954A5C /* ProfileImageSelectorView.swift */; };
 		E3567CBF290776D000954A5C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CBE290776D000954A5C /* ImageUploader.swift */; };
 		E3567CC3290790FA00954A5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CC2290790FA00954A5C /* ContentView.swift */; };
+		E3567CC529079AB300954A5C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CC429079AB300954A5C /* MainTabView.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
 		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
@@ -59,6 +60,7 @@
 		E3567CBC2905496300954A5C /* ProfileImageSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSelectorView.swift; sourceTree = "<group>"; };
 		E3567CBE290776D000954A5C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		E3567CC2290790FA00954A5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E3567CC429079AB300954A5C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				E34FAC1628FDBFC200351368 /* Home */,
 				E34FAC1728FDBFCC00351368 /* LocationSearch */,
 				E3129A3C2900589400D2E3D4 /* Trips */,
+				E3567CC429079AB300954A5C /* MainTabView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				E3EE56372902648400063864 /* RegistrationView.swift in Sources */,
 				E3210EE928FF7C3B00C6A55A /* MapViewState.swift in Sources */,
 				E34FAC1D28FDC16A00351368 /* MapViewActionButton.swift in Sources */,
+				E3567CC529079AB300954A5C /* MainTabView.swift in Sources */,
 				E34FAC2128FDC60A00351368 /* LocationSearchResultsCell.swift in Sources */,
 				E3FD4F9F2901FEF60050AA65 /* Color.swift in Sources */,
 				E344D89728F889EE003A7437 /* UberSwiftUIApp.swift in Sources */,
