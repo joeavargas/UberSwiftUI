@@ -30,6 +30,8 @@
 		E3567CBF290776D000954A5C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CBE290776D000954A5C /* ImageUploader.swift */; };
 		E3567CC3290790FA00954A5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CC2290790FA00954A5C /* ContentView.swift */; };
 		E3567CC529079AB300954A5C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CC429079AB300954A5C /* MainTabView.swift */; };
+		E3567CC92907ACC100954A5C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CC82907ACC100954A5C /* ActivityView.swift */; };
+		E3567CCB2907ACCA00954A5C /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3567CCA2907ACCA00954A5C /* AccountView.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
 		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
@@ -61,6 +63,8 @@
 		E3567CBE290776D000954A5C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		E3567CC2290790FA00954A5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3567CC429079AB300954A5C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E3567CC82907ACC100954A5C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		E3567CCA2907ACCA00954A5C /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
@@ -166,11 +170,13 @@
 		E344D8A728F88AA3003A7437 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E3567CC429079AB300954A5C /* MainTabView.swift */,
 				E3EE562C2902510C00063864 /* Authentication */,
 				E34FAC1628FDBFC200351368 /* Home */,
+				E3567CC72907AC8C00954A5C /* Activity */,
+				E3567CC62907AC4F00954A5C /* Account */,
 				E34FAC1728FDBFCC00351368 /* LocationSearch */,
 				E3129A3C2900589400D2E3D4 /* Trips */,
-				E3567CC429079AB300954A5C /* MainTabView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -258,6 +264,22 @@
 				E3567CBC2905496300954A5C /* ProfileImageSelectorView.swift */,
 			);
 			path = ProfileImageSelectorView;
+			sourceTree = "<group>";
+		};
+		E3567CC62907AC4F00954A5C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				E3567CCA2907ACCA00954A5C /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		E3567CC72907AC8C00954A5C /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				E3567CC82907ACC100954A5C /* ActivityView.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		E3EE562C2902510C00063864 /* Authentication */ = {
@@ -394,11 +416,13 @@
 				E344D8AE28F88BD3003A7437 /* UberMapViewRepresentable.swift in Sources */,
 				E3FD4F9C2901E9810050AA65 /* UberLocation.swift in Sources */,
 				E344D8AC28F88AEF003A7437 /* HomeView.swift in Sources */,
+				E3567CC92907ACC100954A5C /* ActivityView.swift in Sources */,
 				E3567CC3290790FA00954A5C /* ContentView.swift in Sources */,
 				E34FAC1B28FDBFEE00351368 /* LocationSearchActivationView.swift in Sources */,
 				E3567CBA2905405500954A5C /* ImagePicker.swift in Sources */,
 				E3EE56322902516700063864 /* LoginView.swift in Sources */,
 				E3FD4F982901C47C0050AA65 /* RideType.swift in Sources */,
+				E3567CCB2907ACCA00954A5C /* AccountView.swift in Sources */,
 				E3567CBD2905496300954A5C /* ProfileImageSelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

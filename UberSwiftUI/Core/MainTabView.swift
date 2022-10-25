@@ -8,26 +8,59 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @State private var selectedIndex = 0
+    
     var body: some View {
         NavigationView {
-            TabView {
+            TabView(selection: $selectedIndex) {
                 HomeView()
-                    .tabItem{(Image(systemName: "house"))}
-                    .background(.white)
+                    .onTapGesture {
+                        selectedIndex = 0
+                    }
+                    .tabItem{(
+                        VStack {
+                            Image(systemName: "house")
+                            Text("Home")
+                    })}
+                    .tag(0)
                 
-                Text("Activity")
-                    .tabItem{(Image(systemName: "list.bullet.rectangle.portrait"))}
+                ActivityView()
+                    .onTapGesture {
+                        selectedIndex = 1
+                    }
+                    .tabItem{(
+                        VStack {
+                        Image(systemName: "list.bullet.rectangle.portrait")
+                        Text("Activity")
+                    })}
+                    .tag(1)
                 
-                Text("Account")
-                    .tabItem{(Image(systemName: "person.fill"))}
+                AccountView()
+                    .onTapGesture {
+                        selectedIndex = 2
+                    }
+                    .tabItem{(VStack {
+                        Image(systemName: "person.fill")
+                        Text("Account")
+                    })}
+                    .tag(2)
             }
+            .navigationTitle(tabTitle)
             .onAppear{
                 if #available(iOS 15, *) {
                     let appearance = UITabBarAppearance()
                     UITabBar.appearance().scrollEdgeAppearance = appearance
                 }
             }
-            
+        }
+    }
+    
+    var tabTitle: String {
+        switch selectedIndex {
+        case 0: return ""
+        case 1: return "Activity"
+        case 2: return "Account"
+        default: return ""
         }
     }
 }
