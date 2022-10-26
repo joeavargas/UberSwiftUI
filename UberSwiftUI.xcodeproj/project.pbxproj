@@ -35,6 +35,7 @@
 		E3C79BE92908E07F00753D13 /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C79BE82908E07F00753D13 /* AccountHeaderView.swift */; };
 		E3C79BEB2908E19500753D13 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C79BEA2908E19500753D13 /* AccountCell.swift */; };
 		E3C79BED2908F05E00753D13 /* AuthenticationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C79BEC2908F05E00753D13 /* AuthenticationButtonView.swift */; };
+		E3C79BF02908F57500753D13 /* AccountCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C79BEF2908F57500753D13 /* AccountCellViewModel.swift */; };
 		E3EE56322902516700063864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56312902516700063864 /* LoginView.swift */; };
 		E3EE56372902648400063864 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56362902648400063864 /* RegistrationView.swift */; };
 		E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE56392902F32D00063864 /* AuthenticationTextField.swift */; };
@@ -71,6 +72,7 @@
 		E3C79BE82908E07F00753D13 /* AccountHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 		E3C79BEA2908E19500753D13 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		E3C79BEC2908F05E00753D13 /* AuthenticationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButtonView.swift; sourceTree = "<group>"; };
+		E3C79BEF2908F57500753D13 /* AccountCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellViewModel.swift; sourceTree = "<group>"; };
 		E3EE56312902516700063864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3EE56362902648400063864 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3EE56392902F32D00063864 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		E3567CC62907AC4F00954A5C /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				E3C79BEE2908F54B00753D13 /* ViewModel */,
 				E3567CCA2907ACCA00954A5C /* AccountView.swift */,
 				E3C79BE82908E07F00753D13 /* AccountHeaderView.swift */,
 				E3C79BEA2908E19500753D13 /* AccountCell.swift */,
@@ -288,6 +291,14 @@
 				E3567CC82907ACC100954A5C /* ActivityView.swift */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		E3C79BEE2908F54B00753D13 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3C79BEF2908F57500753D13 /* AccountCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E3EE562C2902510C00063864 /* Authentication */ = {
@@ -413,6 +424,7 @@
 				E344D8B028F88D0B003A7437 /* LocationManager.swift in Sources */,
 				E3567CBF290776D000954A5C /* ImageUploader.swift in Sources */,
 				E3C79BEB2908E19500753D13 /* AccountCell.swift in Sources */,
+				E3C79BF02908F57500753D13 /* AccountCellViewModel.swift in Sources */,
 				E3129A3E290058A400D2E3D4 /* RideRequestView.swift in Sources */,
 				E3FD4F9A2901DAFA0050AA65 /* Double.swift in Sources */,
 				E3EE563A2902F32D00063864 /* AuthenticationTextField.swift in Sources */,

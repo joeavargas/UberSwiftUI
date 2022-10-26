@@ -16,8 +16,8 @@ struct AccountView: View {
                 AccountHeaderView()
                 
                 VStack(spacing: 1) {
-                    ForEach((0...2), id: \.self){ _ in
-                        AccountCell()
+                    ForEach((AccountCellViewModel.allCases), id: \.self){ viewModel in
+                        AccountCell(viewModel: viewModel)
                     }
                 }
                 
