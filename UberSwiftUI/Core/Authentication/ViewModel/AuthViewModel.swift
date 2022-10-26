@@ -14,13 +14,24 @@ class AuthViewModel: NSObject, ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     private var tempCurrentUser: FirebaseAuth.User?
     
+    static let shared = AuthViewModel()
+    
     override init() {
-        print("DEBUG: Auth view model did init...")
+        
         userSession = Auth.auth().currentUser
     }
     
-    func login() {
-        print("DEBUG: log in user from vm")
+    func login(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            
+            if let error = error {
+                print("DEBUG: Failed to sign in user with error: ", error.localizedDescription)
+                return
+            }
+            
+            guard let user = result?.user else { return }
+            self.userSession = user
+        }
     }
     
     func register(withEmail email: String, password: String, fullname: String, username: String) {
@@ -58,7 +69,9 @@ class AuthViewModel: NSObject, ObservableObject {
     }
     
     func signOut() {
+        self.userSession = nil
         
+        try? Auth.auth().signOut()
     }
     
 }

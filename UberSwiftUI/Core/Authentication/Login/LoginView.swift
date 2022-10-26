@@ -55,7 +55,7 @@ struct LoginView: View {
                     
                     // MARK: log In button
                     Button(action: {
-                        authVM.login()
+                        authVM.login(withEmail: email, password: password)
                     }, label: {
                         AuthenticationButtonView(backgroundColor: .blue, label: "Log In")
                     })

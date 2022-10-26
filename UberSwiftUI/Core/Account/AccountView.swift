@@ -22,7 +22,7 @@ struct AccountView: View {
                 }
                 
                 Button(action: {
-                    print("DEBUG: handle lout out")
+                    AuthViewModel.shared.signOut()
                 }, label: {
                     AuthenticationButtonView(backgroundColor: .red, label: "Log Out")
                 })
