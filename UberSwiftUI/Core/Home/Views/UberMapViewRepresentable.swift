@@ -104,11 +104,12 @@ extension UberMapViewRepresentable {
             parent.locationSearchVM.getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
                 self.parent.mapState = .polylineAdded
-                // Shrink the mapView when the RideRequestView is presented
-                // to clearly show both destination location and user's location annotations
-                // The presented RideRequestView height is 500px hence why the mapview is given a bottom edge padding value of 500
+                // Shrink the mapView when the RideRequestView is presented to clearly show both destination location and user's location annotations
+                // With the added TabBar, the Confirm button was obscured. The RideRequestView bottom padding went from 24 to 90px to clearly show the Confirm button
+                // To compensate the added RideRequestView realestate, the mapview top and bottom padding had to be adjusted to show both user location and destination annotations
+                // Top decreased from 64 to 40 and bottom increased from 500 to 520
                 let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
-                                                               edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
+                                                               edgePadding: .init(top: 40, left: 32, bottom: 520, right: 32))
                 self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }

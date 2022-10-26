@@ -10,13 +10,20 @@ import SwiftUI
 struct RegistrationView: View {
     @State private var email = ""
     @State private var fullname = ""
+    @State private var username = ""
     @State private var password = ""
     @Environment(\.presentationMode) var mode
+    @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
             ZStack {
                 Color.theme.customGrayColor
                 VStack {
+                    
+                    NavigationLink(destination: ProfileImageSelectorView(),
+                                   isActive:  $authVM.didAuthenticateUser,
+                                   label: {})
+                    
                     // MARK: uber title
                     Text("UBER")
                         .foregroundColor(.white)
@@ -30,10 +37,19 @@ struct RegistrationView: View {
                                                 text: $email)
                         
                         //MARK: full name textfield
-                        AuthenticationTextField(imageName: "person", placeholderText: "Full name", isSecureField: false, text: $fullname)
+                        AuthenticationTextField(imageName: "person",
+                                                placeholderText: "Full name",
+                                                isSecureField: false, text: $fullname)
+                        
+                        // MARK: username textfield
+                        AuthenticationTextField(imageName: "person",
+                                                placeholderText: "Username",
+                                                isSecureField: false, text: $username)
                         
                         //MARK: password textfield
-                        AuthenticationTextField(imageName: "lock", placeholderText: "Password", isSecureField: true, text: $password)
+                        AuthenticationTextField(imageName: "lock",
+                                                placeholderText: "Password",
+                                                isSecureField: true, text: $password)
                         
                         
                     }
@@ -41,16 +57,12 @@ struct RegistrationView: View {
                     
                     //MARK: register button
                     Button(action: {
-                        print("DEBUG: register user")
+                        authVM.register(withEmail: email,
+                                        password: password,
+                                        fullname: fullname,
+                                        username: username)
                     }, label: {
-                        Text("Register")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .frame(width: 340, height: 50)
-                            .background(Color.blue)
-                            .clipShape(Rectangle())
-                            .cornerRadius(8)
-                            .padding()
+                        AuthenticationButtonView(backgroundColor: .blue, label: "Register")
                     })
                     .padding(.top, 24)
                     

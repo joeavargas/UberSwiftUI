@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct UberSwiftUIApp: App {
-    @StateObject var locationSearchVM = LocationSearchViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-//            HomeView()
-//                .environmentObject(locationSearchVM)
-            LoginView()
+            ContentView()
+                .environmentObject(AuthViewModel.shared)
         }
     }
 }
