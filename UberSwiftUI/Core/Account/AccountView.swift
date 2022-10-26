@@ -24,15 +24,7 @@ struct AccountView: View {
                 Button(action: {
                     print("DEBUG: handle lout out")
                 }, label: {
-                    Text("Log Out")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(width: 340, height: 50)
-                        .background(Color.red)
-                        .clipShape(Rectangle())
-                        .cornerRadius(8)
-                        .padding()
-                        
+                    AuthenticationButtonView(backgroundColor: .red, label: "Log Out")
                 })
                 
                 Spacer()

@@ -57,14 +57,7 @@ struct LoginView: View {
                     Button(action: {
                         authVM.login()
                     }, label: {
-                        Text("Log In")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .frame(width: 340, height: 50)
-                            .background(Color.blue)
-                            .clipShape(Rectangle())
-                            .cornerRadius(8)
-                            .padding()
+                        AuthenticationButtonView(backgroundColor: .blue, label: "Log In")
                     })
                     .padding(.top, 32) //TODO: 👈🏼 remove padding when "forgot password" button is implemented
                     
