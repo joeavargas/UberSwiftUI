@@ -64,6 +64,7 @@ class AuthViewModel: NSObject, ObservableObject {
                 .document(uid)
                 .updateData(["profileImageUrl": imageUrl]){ _ in
                     print("DEBUG: Successfully updated user data")
+                    self.userSession = self.tempCurrentUser
                 }
         }
     }
