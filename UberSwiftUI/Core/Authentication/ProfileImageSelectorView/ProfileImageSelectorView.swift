@@ -63,8 +63,7 @@ struct ProfileImageSelectorView: View {
                 } else {
                     //MARK: upload image later
                     Button(action: {
-                        //TODO: handle moving on to HomeView
-                        print("DEBUG: Upload image later")
+                        authVM.uploadImageLater()
                     }, label: {
                         Text("Upload image later")
                             .font(.callout)

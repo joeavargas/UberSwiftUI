@@ -69,6 +69,10 @@ class AuthViewModel: NSObject, ObservableObject {
         }
     }
     
+    func uploadImageLater() {
+        self.userSession = self.tempCurrentUser
+    }
+    
     func signOut() {
         self.userSession = nil
         
