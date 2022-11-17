@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct AccountView: View {
+    private let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
+    
     var body: some View {
         ZStack {
             Color.theme.secondaryBackgroundColor
             
             VStack(spacing: 32) {
-                AccountHeaderView()
+                AccountHeaderView(user: user)
                 
                 VStack(spacing: 1) {
                     ForEach((AccountCellViewModel.allCases), id: \.self){ viewModel in
@@ -31,14 +37,5 @@ struct AccountView: View {
             }
             .background(Color.theme.secondaryBackgroundColor)
         }
-    }
-}
-
-struct AccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountView()
-            .preferredColorScheme(.dark)
-        AccountView()
-            .preferredColorScheme(.light)
     }
 }
