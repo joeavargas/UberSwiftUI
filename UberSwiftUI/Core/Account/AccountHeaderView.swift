@@ -9,6 +9,12 @@ import SwiftUI
 
 struct AccountHeaderView: View {
     
+    private let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
+    
     var body: some View {
             HStack {
                 Image(systemName: "person")
@@ -19,7 +25,7 @@ struct AccountHeaderView: View {
                     .padding(.leading)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Tony Stark")
+                    Text(user.fullname )
                         .font(.system(size: 18))
                     Text("Available")
                         .foregroundColor(.gray)
@@ -31,14 +37,5 @@ struct AccountHeaderView: View {
             .frame(height: 80)
             .background(Color.theme.accountCellColor)
             .padding(.top)
-    }
-}
-
-struct AccountHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountHeaderView()
-            .preferredColorScheme(.light)
-        AccountHeaderView()
-            .preferredColorScheme(.dark)
     }
 }
